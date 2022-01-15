@@ -13,14 +13,17 @@ const Login = () => { //Form control. email and password are updated when the us
       setLoading(false);
     }
   }, []);
+
   // main part of logic
   const onSubmit = e => {
     e.preventDefault(); //keep the page from refreshing when the form is submitted
+
     //create a user object with the values of the email and password entered in the form
     const user = {
       email: email,
       password: password
     };
+
     //make a fetch request to the API
     fetch('http://127.0.0.1:8000/api/v1/users/auth/login/', {
       method: 'POST',

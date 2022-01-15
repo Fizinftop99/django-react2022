@@ -3,6 +3,8 @@ import Navbar from './components/layout/Navbar';
 import Login from './views/auth/Login';
 import Signup from './views/auth/Signup';
 import Logout from './views/auth/Logout';
+import Dashboard from "./views/app/Dashboard";
+
 import { useState, useEffect } from 'react'
 import './App.css'
 import SingleCard from './components/SingleCard'
@@ -86,11 +88,12 @@ const App = () => {
           <Route path='/login' component={Login} exact />
           <Route path='/signup' component={Signup} exact />
           <Route path='/logout' component={Logout} exact />
+          <Route path='/dashboard' component={Dashboard} exact />
         </Switch>
       </Router>
     </div>
 
-    <div className="App">
+    <div className='App'>
       <h1>Memory</h1>
       <button onClick={shuffleCards}>New Game</button>
 

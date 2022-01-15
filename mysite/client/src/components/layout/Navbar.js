@@ -16,7 +16,6 @@ const Navbar = () => {
       <ul>
         {isAuth === true ? (
           <Fragment>
-            {' '}
             <li>
               <Link to='/dashboard'>Dashboard</Link>
             </li>
@@ -26,7 +25,6 @@ const Navbar = () => {
           </Fragment>
         ) : (
           <Fragment>
-            {' '}
             <li>
               <Link to='/login'>Login</Link>
             </li>
